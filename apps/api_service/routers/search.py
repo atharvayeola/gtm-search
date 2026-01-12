@@ -8,7 +8,7 @@ import json
 from typing import Optional
 
 import httpx
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Request
 from pydantic import BaseModel
 
 from shared.utils.config import get_settings
@@ -40,13 +40,17 @@ class ParseQueryRequest(BaseModel):
 
 class ParseQueryResponse(BaseModel):
     """Response with parsed filters."""
+    request_id: str
     original_query: str
     filters: ParsedQuery
     explanation: str
 
 
 @router.post("/parse", response_model=ParseQueryResponse)
-def parse_natural_language_query(request: ParseQueryRequest) -> ParseQueryResponse:
+def parse_natural_language_query(
+    request: ParseQueryRequest,
+    http_request: Request,
+) -> ParseQueryResponse:
     """
     Parse a natural language query into structured filters.
     
@@ -56,6 +60,7 @@ def parse_natural_language_query(request: ParseQueryRequest) -> ParseQueryRespon
     if not settings.openai_api_key:
         # Fallback: basic text search
         return ParseQueryResponse(
+            request_id=http_request.state.request_id,
             original_query=request.query,
             filters=ParsedQuery(q=request.query),
             explanation="Natural language parsing disabled (no OpenAI key)"
@@ -117,6 +122,7 @@ Also provide a brief explanation of what you parsed."""
                         if error_data.get("code") == "insufficient_quota":
                             # Quota exhausted - fall back immediately
                             return ParseQueryResponse(
+                                request_id=http_request.state.request_id,
                                 original_query=request.query,
                                 filters=ParsedQuery(q=request.query),
                                 explanation="OpenAI quota exhausted, using text search"
@@ -141,6 +147,7 @@ Also provide a brief explanation of what you parsed."""
         else:
             # All retries failed - fall back to text search
             return ParseQueryResponse(
+                request_id=http_request.state.request_id,
                 original_query=request.query,
                 filters=ParsedQuery(q=request.query),
                 explanation="LLM unavailable, using text search"
@@ -152,6 +159,7 @@ Also provide a brief explanation of what you parsed."""
         
         if start_idx == -1 or end_idx == 0:
             return ParseQueryResponse(
+                request_id=http_request.state.request_id,
                 original_query=request.query,
                 filters=ParsedQuery(q=request.query),
                 explanation="Could not parse query"
@@ -180,6 +188,7 @@ Also provide a brief explanation of what you parsed."""
                 explanation = remaining[:200]
         
         return ParseQueryResponse(
+            request_id=http_request.state.request_id,
             original_query=request.query,
             filters=ParsedQuery(**parsed),
             explanation=explanation
@@ -188,6 +197,7 @@ Also provide a brief explanation of what you parsed."""
     except Exception as e:
         logger.warning("Query parsing failed", error=str(e))
         return ParseQueryResponse(
+            request_id=http_request.state.request_id,
             original_query=request.query,
             filters=ParsedQuery(q=request.query),
             explanation=f"Parsing failed: {str(e)[:100]}"

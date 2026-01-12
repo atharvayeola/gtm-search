@@ -91,6 +91,11 @@ curl http://localhost:8000/health
 make validate
 ```
 
+`make validate` expects the API and UI to be running and Playwright available. If needed:
+```bash
+python -m playwright install chromium
+```
+
 ---
 
 ## Architecture
@@ -127,7 +132,7 @@ make validate
 | **Celery + Redis** | Crash-safe task queue with `acks_late=True` |
 | **Two-tier LLM** | Local Ollama (free) for bulk, OpenAI for search/escalation |
 | **MinIO for raw storage** | S3-compatible, stores original payloads for re-extraction |
-| **Batched extraction** | 20 jobs per LLM call reduces overhead |
+| **Batched extraction** | Single LLM call per 20 jobs with per-job fallback for resiliency |
 
 ---
 
@@ -194,6 +199,10 @@ Escalate to Tier 2 when ANY is true:
 ```json
 {
   "source_type": "greenhouse | lever",
+  "source_key": "string",
+  "source_job_id": "string",
+  "company_name": "string",
+  "company_domain": "string | null",
   "role_title": "string",
   "seniority_level": "intern | junior | mid | senior | staff | principal | manager | director | vp | cxo | unknown",
   "job_function": "sales | revops | marketing | engineering | ...",
@@ -201,11 +210,14 @@ Escalate to Tier 2 when ANY is true:
   "location_state": "string | null",
   "location_country": "string | null",
   "remote_type": "onsite | hybrid | remote | unknown",
+  "employment_type": "full_time | part_time | contract | internship | temporary | unknown",
   "salary_min_usd": "int | null",
   "salary_max_usd": "int | null",
   "job_summary": "string (max 60 words)",
+  "key_functions_hired_for": ["string"],
   "skills_raw": ["skill1", "skill2"],
   "tools_raw": ["tool1", "tool2"],
+  "highlights": [{"label": "string", "text": "string", "start_char": 0, "end_char": 10}],
   "confidence": 0.85,
   "needs_tier2": false
 }
@@ -236,6 +248,15 @@ After each run, a report is generated at `reports/run_{timestamp}.json`:
 | OpenAI GPT-4o-mini | $0.15 | $0.60 |
 | OpenAI GPT-4o | $2.50 | $10.00 |
 | Anthropic Claude 3.5 | $3.00 | $15.00 |
+
+---
+
+## API & UI Notes
+
+- All API responses include `request_id` in the JSON body and `X-Request-Id` header.
+- `/jobs` supports full-text search (Postgres FTS) with fallback to `LIKE` and supports `skill` filters.
+- `/skills/suggest` returns top prefix matches across canonical names and aliases.
+- The Jobs UI includes a skills typeahead filter that maps to canonical skill names.
 
 ---
 
@@ -271,6 +292,8 @@ See `.env.example` for the complete list with descriptions.
 | `POSTGRES_URL` | `postgresql://gtm:gtm_password@localhost:5433/gtm_engine` | Database URL |
 | `REDIS_URL` | `redis://localhost:6379/0` | Celery broker |
 | `S3_ENDPOINT` | `http://localhost:9000` | MinIO endpoint |
+| `S3_ACCESS_KEY` | `minioadmin` | MinIO access key |
+| `S3_SECRET_KEY` | `minioadmin` | MinIO secret key |
 | `S3_BUCKET` | `gtm-raw` | Raw payload bucket |
 
 ### LLM
@@ -281,6 +304,7 @@ See `.env.example` for the complete list with descriptions.
 | `OLLAMA_BASE_URL` | `http://localhost:11434` | Tier 1 LLM |
 | `TIER2_PROVIDER` | `disabled` | `openai`, `anthropic`, or `disabled` |
 | `OPENAI_API_KEY` | - | Required for search parsing |
+| `ANTHROPIC_API_KEY` | - | Optional for Tier 2 |
 
 ### Pipeline
 | Variable | Default | Description |

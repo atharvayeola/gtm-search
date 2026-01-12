@@ -189,8 +189,9 @@ def extract_batch_tier1(self, job_raw_ids: list[str]):
                 
                 if existing_job:
                     # Update existing
-                    _update_job(existing_job, extracted, company.id)
-                    job_id = existing_job.id
+                    job = existing_job
+                    _update_job(job, extracted, company.id)
+                    job_id = job.id
                 else:
                     # Create new
                     job_id = str(uuid4())
@@ -212,6 +213,8 @@ def extract_batch_tier1(self, job_raw_ids: list[str]):
                         salary_min_usd=extracted.salary_min_usd,
                         salary_max_usd=extracted.salary_max_usd,
                         job_summary=extracted.job_summary,
+                        confidence=extracted.confidence,
+                        needs_tier2=False,
                         updated_at=datetime.now(timezone.utc),
                     )
                     db.add(job)
@@ -237,13 +240,18 @@ def extract_batch_tier1(self, job_raw_ids: list[str]):
                 )
                 
                 # Check if needs Tier 2
-                needs_tier2 = should_escalate_tier2(extracted)
-                if needs_tier2 and len(extracted.skills_raw) == 0 and len(clean_text) > 800:
-                    needs_tier2 = True
+                escalation_needed = should_escalate_tier2(extracted)
+                if len(extracted.skills_raw) == 0 and len(clean_text) > 800:
+                    escalation_needed = True
+
+                needs_tier2 = escalation_needed and settings.tier2_enabled
                 
                 # Enqueue Tier 2 if needed and enabled
-                if needs_tier2 and settings.tier2_enabled:
+                if needs_tier2:
                     extract_job_tier2.delay(jr.id)
+
+                job.confidence = extracted.confidence
+                job.needs_tier2 = needs_tier2
                 
                 jobs_created += 1
                 

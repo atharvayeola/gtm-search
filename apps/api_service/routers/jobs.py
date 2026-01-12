@@ -7,7 +7,7 @@ Endpoints for searching and viewing jobs.
 from typing import Optional
 from uuid import UUID
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from pydantic import BaseModel
 from sqlalchemy import func, or_, select
 from sqlalchemy.orm import Session, joinedload
@@ -52,6 +52,7 @@ class JobListItem(BaseModel):
 
 class JobListResponse(BaseModel):
     """Paginated job search results."""
+    request_id: str
     jobs: list[JobListItem]
     total: int
     page: int
@@ -60,6 +61,7 @@ class JobListResponse(BaseModel):
 
 class JobDetailResponse(BaseModel):
     """Full job details."""
+    request_id: str
     id: str
     role_title: str
     company_name: str
@@ -89,9 +91,11 @@ class JobDetailResponse(BaseModel):
 
 @router.get("", response_model=JobListResponse)
 def search_jobs(
+    request: Request,
     q: Optional[str] = Query(None, description="Full-text search query"),
     seniority: Optional[list[str]] = Query(None, description="Filter by seniority levels"),
     function: Optional[list[str]] = Query(None, description="Filter by job functions"),
+    skill: Optional[list[str]] = Query(None, description="Filter by skills (canonical names)"),
     remote_type: Optional[list[str]] = Query(None, description="Filter by remote type"),
     city: Optional[str] = Query(None, description="Filter by city"),
     state: Optional[str] = Query(None, description="Filter by state"),
@@ -116,12 +120,15 @@ def search_jobs(
         
         # Apply filters
         conditions = []
+        needs_distinct = False
         
         if q:
-            # Full-text search on role_title and job_summary
+            query = query.outerjoin(JobText, JobText.job_id == Job.id)
             search_term = f"%{q.lower()}%"
+            fts_query = func.plainto_tsquery("english", q)
             conditions.append(
                 or_(
+                    JobText.search_vector.op("@@")(fts_query),
                     func.lower(Job.role_title).like(search_term),
                     func.lower(Job.job_summary).like(search_term),
                 )
@@ -132,6 +139,14 @@ def search_jobs(
         
         if function:
             conditions.append(Job.job_function.in_(function))
+
+        if skill:
+            query = (
+                query.join(JobSkill, JobSkill.job_id == Job.id)
+                .join(Skill, Skill.skill_id == JobSkill.skill_id)
+            )
+            conditions.append(Skill.canonical_name.in_(skill))
+            needs_distinct = True
         
         if remote_type:
             conditions.append(Job.remote_type.in_(remote_type))
@@ -156,6 +171,9 @@ def search_jobs(
         
         if conditions:
             query = query.where(*conditions)
+
+        if needs_distinct:
+            query = query.distinct()
         
         # Get total count
         count_query = select(func.count()).select_from(
@@ -190,6 +208,7 @@ def search_jobs(
             ))
         
         return JobListResponse(
+            request_id=request.state.request_id,
             jobs=jobs,
             total=total,
             page=page,
@@ -198,7 +217,7 @@ def search_jobs(
 
 
 @router.get("/{job_id}", response_model=JobDetailResponse)
-def get_job(job_id: str) -> JobDetailResponse:
+def get_job(job_id: str, request: Request) -> JobDetailResponse:
     """Get full job details by ID."""
     with get_db() as db:
         # Fetch job with company
@@ -231,6 +250,7 @@ def get_job(job_id: str) -> JobDetailResponse:
         ]
         
         return JobDetailResponse(
+            request_id=request.state.request_id,
             id=job.id,
             role_title=job.role_title,
             company_name=company_name,

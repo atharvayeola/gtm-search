@@ -6,7 +6,7 @@ Endpoints for skill suggestions and lookup.
 
 from typing import Optional
 
-from fastapi import APIRouter, Query
+from fastapi import APIRouter, Query, Request
 from pydantic import BaseModel
 from sqlalchemy import func, select
 
@@ -30,11 +30,13 @@ class SkillSuggestion(BaseModel):
 
 class SkillSuggestResponse(BaseModel):
     """Skill suggestions response."""
+    request_id: str
     suggestions: list[SkillSuggestion]
 
 
 class SkillDetailResponse(BaseModel):
     """Skill detail response."""
+    request_id: str
     id: str
     name: str
     type: Optional[str] = None
@@ -48,8 +50,9 @@ class SkillDetailResponse(BaseModel):
 
 @router.get("/suggest", response_model=SkillSuggestResponse)
 def suggest_skills(
+    request: Request,
     q: str = Query(..., min_length=1, description="Search query"),
-    limit: int = Query(10, ge=1, le=50, description="Max suggestions"),
+    limit: int = Query(20, ge=1, le=50, description="Max suggestions"),
 ) -> SkillSuggestResponse:
     """
     Typeahead skill suggestions.
@@ -57,38 +60,49 @@ def suggest_skills(
     Searches canonical names and aliases.
     """
     with get_db() as db:
-        search_term = f"%{q.lower()}%"
-        
-        # Search skills with job counts
+        query_term = q.strip().lower()
+
         results = db.execute(
             select(
                 Skill.skill_id,
                 Skill.canonical_name,
                 Skill.skill_type,
+                Skill.aliases,
                 func.count(JobSkill.job_id).label("job_count"),
             )
             .outerjoin(JobSkill, JobSkill.skill_id == Skill.skill_id)
-            .where(func.lower(Skill.canonical_name).like(search_term))
             .group_by(Skill.skill_id)
-            .order_by(func.count(JobSkill.job_id).desc())
-            .limit(limit)
         ).all()
-        
-        suggestions = [
-            SkillSuggestion(
-                id=row.skill_id,
-                name=row.canonical_name,
-                type=row.skill_type,
-                job_count=row.job_count,
+
+        matches = []
+        for row in results:
+            name = row.canonical_name or ""
+            aliases = row.aliases or []
+            alias_hits = any(
+                isinstance(alias, str) and alias.lower().startswith(query_term)
+                for alias in aliases
             )
-            for row in results
-        ]
-        
-        return SkillSuggestResponse(suggestions=suggestions)
+            if name.lower().startswith(query_term) or alias_hits:
+                matches.append(
+                    SkillSuggestion(
+                        id=row.skill_id,
+                        name=name,
+                        type=row.skill_type,
+                        job_count=row.job_count,
+                    )
+                )
+
+        matches.sort(key=lambda item: (-item.job_count, item.name.lower()))
+        suggestions = matches[:limit]
+
+        return SkillSuggestResponse(
+            request_id=request.state.request_id,
+            suggestions=suggestions,
+        )
 
 
 @router.get("/{skill_id}", response_model=SkillDetailResponse)
-def get_skill(skill_id: str) -> SkillDetailResponse:
+def get_skill(skill_id: str, request: Request) -> SkillDetailResponse:
     """Get skill details."""
     with get_db() as db:
         skill = db.execute(
@@ -108,6 +122,7 @@ def get_skill(skill_id: str) -> SkillDetailResponse:
         aliases = skill.aliases if skill.aliases else []
         
         return SkillDetailResponse(
+            request_id=request.state.request_id,
             id=skill.skill_id,
             name=skill.canonical_name,
             type=skill.skill_type,
