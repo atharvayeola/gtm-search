@@ -170,6 +170,25 @@ After 5 retries, tasks move to the dead letter queue (`dlq.scrape`).
 
 ---
 
+## Operational FAQ
+
+### How do you handle 50k requests without getting banned?
+- Use Common Crawl discovery to avoid crawling arbitrary pages and focus on public posting APIs.
+- Enforce per-host concurrency caps (5) and centralized rate limiting via Redis.
+- Retry only on `429/5xx` with exponential backoff (2s → 4s → 8s → 16s → 32s).
+- Skip invalid sources for 7 days to avoid repeated failing calls.
+
+### How much would this run cost in LLM tokens?
+- Tier 1 runs on local Ollama, so there is no per-token API cost.
+- Tier 2 is optional; the report uses average tokens per escalation and the pricing constants below.
+- Estimated tokens = `jobs_escalated_t2 * (avg_input_tokens + avg_output_tokens)`.
+- Run `make report` for a cost estimate based on actual counts.
+
+### How would you scale this to 1 Million jobs?
+See **Scaling to 1,000,000 Jobs** below (queue sharding, autoscaling, partitioning, and search offload).
+
+---
+
 ## LLM Pipeline
 
 ### Two-Tier Architecture
@@ -227,16 +246,16 @@ Escalate to Tier 2 when ANY is true:
 
 ## Cost Estimation
 
-After each run, a report is generated at `reports/run_{timestamp}.json`:
+After each run, a report is generated at `reports/run_{timestamp}.json` (values below are illustrative):
 
 ```json
 {
   "jobs_ingested": 50000,
   "jobs_extracted_t1": 48500,
   "jobs_escalated_t2": 1500,
-  "tier2_tokens_in_total": 750000,
-  "tier2_tokens_out_total": 150000,
-  "tier2_estimated_cost_usd": 4.50,
+  "tier2_tokens_in_total": 3000000,
+  "tier2_tokens_out_total": 750000,
+  "tier2_estimated_cost_usd": 18.00,
   "top_20_skills_by_count": [...]
 }
 ```
@@ -245,9 +264,8 @@ After each run, a report is generated at `reports/run_{timestamp}.json`:
 
 | Provider | Input (per 1M) | Output (per 1M) |
 |----------|---------------|-----------------|
-| OpenAI GPT-4o-mini | $0.15 | $0.60 |
-| OpenAI GPT-4o | $2.50 | $10.00 |
-| Anthropic Claude 3.5 | $3.00 | $15.00 |
+| OpenAI (default) | $3.00 | $12.00 |
+| Anthropic (default) | $3.00 | $15.00 |
 
 ---
 
