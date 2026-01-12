@@ -1,0 +1,30 @@
+FROM python:3.11-slim
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libpq-dev \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
+WORKDIR /app
+
+# Copy project files
+COPY pyproject.toml ./
+COPY shared/ ./shared/
+COPY apps/ ./apps/
+COPY services/ ./services/
+COPY workers/ ./workers/
+COPY seed/ ./seed/
+COPY scripts/ ./scripts/
+
+# Create virtual environment and install dependencies
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -e .
+
+# Default command (overridden by docker-compose)
+CMD ["python", "-c", "print('GTM Engine service ready')"]

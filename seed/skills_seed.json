@@ -1,0 +1,1231 @@
+{
+    "skills": [
+        {
+            "canonical_name": "salesforce",
+            "skill_type": "crm",
+            "aliases": [
+                "sfdc",
+                "salesforce crm",
+                "salesforce.com"
+            ]
+        },
+        {
+            "canonical_name": "hubspot",
+            "skill_type": "crm",
+            "aliases": [
+                "hubspot crm",
+                "hs"
+            ]
+        },
+        {
+            "canonical_name": "marketo",
+            "skill_type": "crm",
+            "aliases": [
+                "adobe marketo",
+                "marketo engage"
+            ]
+        },
+        {
+            "canonical_name": "outreach",
+            "skill_type": "crm",
+            "aliases": [
+                "outreach.io"
+            ]
+        },
+        {
+            "canonical_name": "salesloft",
+            "skill_type": "crm",
+            "aliases": [
+                "sales loft"
+            ]
+        },
+        {
+            "canonical_name": "gong",
+            "skill_type": "crm",
+            "aliases": [
+                "gong.io"
+            ]
+        },
+        {
+            "canonical_name": "zoominfo",
+            "skill_type": "data_tool",
+            "aliases": [
+                "zoom info"
+            ]
+        },
+        {
+            "canonical_name": "apollo",
+            "skill_type": "data_tool",
+            "aliases": [
+                "apollo.io"
+            ]
+        },
+        {
+            "canonical_name": "6sense",
+            "skill_type": "data_tool",
+            "aliases": [
+                "sixsense"
+            ]
+        },
+        {
+            "canonical_name": "clearbit",
+            "skill_type": "data_tool",
+            "aliases": []
+        },
+        {
+            "canonical_name": "linkedin sales navigator",
+            "skill_type": "crm",
+            "aliases": [
+                "sales navigator",
+                "linkedin sn"
+            ]
+        },
+        {
+            "canonical_name": "pardot",
+            "skill_type": "crm",
+            "aliases": [
+                "salesforce pardot"
+            ]
+        },
+        {
+            "canonical_name": "eloqua",
+            "skill_type": "crm",
+            "aliases": [
+                "oracle eloqua"
+            ]
+        },
+        {
+            "canonical_name": "drift",
+            "skill_type": "crm",
+            "aliases": [
+                "drift.com"
+            ]
+        },
+        {
+            "canonical_name": "intercom",
+            "skill_type": "crm",
+            "aliases": []
+        },
+        {
+            "canonical_name": "zendesk",
+            "skill_type": "crm",
+            "aliases": [
+                "zendesk support"
+            ]
+        },
+        {
+            "canonical_name": "freshdesk",
+            "skill_type": "crm",
+            "aliases": []
+        },
+        {
+            "canonical_name": "servicenow",
+            "skill_type": "crm",
+            "aliases": [
+                "service now",
+                "service-now"
+            ]
+        },
+        {
+            "canonical_name": "gainsight",
+            "skill_type": "crm",
+            "aliases": []
+        },
+        {
+            "canonical_name": "totango",
+            "skill_type": "crm",
+            "aliases": []
+        },
+        {
+            "canonical_name": "churnzero",
+            "skill_type": "crm",
+            "aliases": [
+                "churn zero"
+            ]
+        },
+        {
+            "canonical_name": "mixpanel",
+            "skill_type": "data_tool",
+            "aliases": []
+        },
+        {
+            "canonical_name": "amplitude",
+            "skill_type": "data_tool",
+            "aliases": []
+        },
+        {
+            "canonical_name": "segment",
+            "skill_type": "data_tool",
+            "aliases": [
+                "twilio segment"
+            ]
+        },
+        {
+            "canonical_name": "google analytics",
+            "skill_type": "data_tool",
+            "aliases": [
+                "ga4",
+                "google analytics 4",
+                "universal analytics"
+            ]
+        },
+        {
+            "canonical_name": "adobe analytics",
+            "skill_type": "data_tool",
+            "aliases": [
+                "omniture"
+            ]
+        },
+        {
+            "canonical_name": "python",
+            "skill_type": "language",
+            "aliases": [
+                "python3",
+                "py"
+            ]
+        },
+        {
+            "canonical_name": "javascript",
+            "skill_type": "language",
+            "aliases": [
+                "js",
+                "ecmascript"
+            ]
+        },
+        {
+            "canonical_name": "typescript",
+            "skill_type": "language",
+            "aliases": [
+                "ts"
+            ]
+        },
+        {
+            "canonical_name": "java",
+            "skill_type": "language",
+            "aliases": []
+        },
+        {
+            "canonical_name": "golang",
+            "skill_type": "language",
+            "aliases": [
+                "go",
+                "go lang"
+            ]
+        },
+        {
+            "canonical_name": "rust",
+            "skill_type": "language",
+            "aliases": []
+        },
+        {
+            "canonical_name": "c++",
+            "skill_type": "language",
+            "aliases": [
+                "cpp",
+                "cplusplus"
+            ]
+        },
+        {
+            "canonical_name": "c#",
+            "skill_type": "language",
+            "aliases": [
+                "csharp",
+                "c sharp"
+            ]
+        },
+        {
+            "canonical_name": "ruby",
+            "skill_type": "language",
+            "aliases": []
+        },
+        {
+            "canonical_name": "php",
+            "skill_type": "language",
+            "aliases": []
+        },
+        {
+            "canonical_name": "scala",
+            "skill_type": "language",
+            "aliases": []
+        },
+        {
+            "canonical_name": "kotlin",
+            "skill_type": "language",
+            "aliases": []
+        },
+        {
+            "canonical_name": "swift",
+            "skill_type": "language",
+            "aliases": []
+        },
+        {
+            "canonical_name": "r",
+            "skill_type": "language",
+            "aliases": [
+                "r language",
+                "rlang"
+            ]
+        },
+        {
+            "canonical_name": "sql",
+            "skill_type": "database",
+            "aliases": []
+        },
+        {
+            "canonical_name": "postgresql",
+            "skill_type": "database",
+            "aliases": [
+                "postgres",
+                "psql"
+            ]
+        },
+        {
+            "canonical_name": "mysql",
+            "skill_type": "database",
+            "aliases": [
+                "my sql"
+            ]
+        },
+        {
+            "canonical_name": "microsoft sql server",
+            "skill_type": "database",
+            "aliases": [
+                "mssql",
+                "ms sql",
+                "sql server"
+            ]
+        },
+        {
+            "canonical_name": "mongodb",
+            "skill_type": "database",
+            "aliases": [
+                "mongo"
+            ]
+        },
+        {
+            "canonical_name": "redis",
+            "skill_type": "database",
+            "aliases": []
+        },
+        {
+            "canonical_name": "elasticsearch",
+            "skill_type": "database",
+            "aliases": [
+                "elastic search",
+                "es"
+            ]
+        },
+        {
+            "canonical_name": "dynamodb",
+            "skill_type": "database",
+            "aliases": [
+                "dynamo db",
+                "aws dynamodb"
+            ]
+        },
+        {
+            "canonical_name": "cassandra",
+            "skill_type": "database",
+            "aliases": [
+                "apache cassandra"
+            ]
+        },
+        {
+            "canonical_name": "oracle database",
+            "skill_type": "database",
+            "aliases": [
+                "oracle db",
+                "oracle"
+            ]
+        },
+        {
+            "canonical_name": "neo4j",
+            "skill_type": "database",
+            "aliases": []
+        },
+        {
+            "canonical_name": "sqlite",
+            "skill_type": "database",
+            "aliases": []
+        },
+        {
+            "canonical_name": "aws",
+            "skill_type": "cloud",
+            "aliases": [
+                "amazon web services",
+                "amazon aws"
+            ]
+        },
+        {
+            "canonical_name": "google cloud",
+            "skill_type": "cloud",
+            "aliases": [
+                "gcp",
+                "google cloud platform"
+            ]
+        },
+        {
+            "canonical_name": "azure",
+            "skill_type": "cloud",
+            "aliases": [
+                "microsoft azure",
+                "ms azure"
+            ]
+        },
+        {
+            "canonical_name": "kubernetes",
+            "skill_type": "cloud",
+            "aliases": [
+                "k8s",
+                "kube"
+            ]
+        },
+        {
+            "canonical_name": "docker",
+            "skill_type": "cloud",
+            "aliases": []
+        },
+        {
+            "canonical_name": "terraform",
+            "skill_type": "cloud",
+            "aliases": [
+                "hashicorp terraform"
+            ]
+        },
+        {
+            "canonical_name": "ansible",
+            "skill_type": "cloud",
+            "aliases": []
+        },
+        {
+            "canonical_name": "jenkins",
+            "skill_type": "cloud",
+            "aliases": []
+        },
+        {
+            "canonical_name": "github actions",
+            "skill_type": "cloud",
+            "aliases": [
+                "gh actions"
+            ]
+        },
+        {
+            "canonical_name": "gitlab ci",
+            "skill_type": "cloud",
+            "aliases": [
+                "gitlab ci/cd"
+            ]
+        },
+        {
+            "canonical_name": "circleci",
+            "skill_type": "cloud",
+            "aliases": [
+                "circle ci"
+            ]
+        },
+        {
+            "canonical_name": "datadog",
+            "skill_type": "cloud",
+            "aliases": []
+        },
+        {
+            "canonical_name": "splunk",
+            "skill_type": "cloud",
+            "aliases": []
+        },
+        {
+            "canonical_name": "new relic",
+            "skill_type": "cloud",
+            "aliases": [
+                "newrelic"
+            ]
+        },
+        {
+            "canonical_name": "prometheus",
+            "skill_type": "cloud",
+            "aliases": []
+        },
+        {
+            "canonical_name": "grafana",
+            "skill_type": "cloud",
+            "aliases": []
+        },
+        {
+            "canonical_name": "snowflake",
+            "skill_type": "data_tool",
+            "aliases": [
+                "snowflake data cloud"
+            ]
+        },
+        {
+            "canonical_name": "databricks",
+            "skill_type": "data_tool",
+            "aliases": []
+        },
+        {
+            "canonical_name": "dbt",
+            "skill_type": "data_tool",
+            "aliases": [
+                "data build tool"
+            ]
+        },
+        {
+            "canonical_name": "airflow",
+            "skill_type": "data_tool",
+            "aliases": [
+                "apache airflow"
+            ]
+        },
+        {
+            "canonical_name": "fivetran",
+            "skill_type": "data_tool",
+            "aliases": []
+        },
+        {
+            "canonical_name": "stitch",
+            "skill_type": "data_tool",
+            "aliases": [
+                "stitch data"
+            ]
+        },
+        {
+            "canonical_name": "looker",
+            "skill_type": "data_tool",
+            "aliases": [
+                "google looker"
+            ]
+        },
+        {
+            "canonical_name": "tableau",
+            "skill_type": "data_tool",
+            "aliases": [
+                "tableau software"
+            ]
+        },
+        {
+            "canonical_name": "power bi",
+            "skill_type": "data_tool",
+            "aliases": [
+                "powerbi",
+                "microsoft power bi"
+            ]
+        },
+        {
+            "canonical_name": "metabase",
+            "skill_type": "data_tool",
+            "aliases": []
+        },
+        {
+            "canonical_name": "redshift",
+            "skill_type": "data_tool",
+            "aliases": [
+                "amazon redshift",
+                "aws redshift"
+            ]
+        },
+        {
+            "canonical_name": "bigquery",
+            "skill_type": "data_tool",
+            "aliases": [
+                "big query",
+                "google bigquery"
+            ]
+        },
+        {
+            "canonical_name": "spark",
+            "skill_type": "data_tool",
+            "aliases": [
+                "apache spark",
+                "pyspark"
+            ]
+        },
+        {
+            "canonical_name": "kafka",
+            "skill_type": "data_tool",
+            "aliases": [
+                "apache kafka"
+            ]
+        },
+        {
+            "canonical_name": "pandas",
+            "skill_type": "data_tool",
+            "aliases": []
+        },
+        {
+            "canonical_name": "numpy",
+            "skill_type": "data_tool",
+            "aliases": []
+        },
+        {
+            "canonical_name": "scikit-learn",
+            "skill_type": "data_tool",
+            "aliases": [
+                "sklearn",
+                "scikit learn"
+            ]
+        },
+        {
+            "canonical_name": "tensorflow",
+            "skill_type": "data_tool",
+            "aliases": [
+                "tf"
+            ]
+        },
+        {
+            "canonical_name": "pytorch",
+            "skill_type": "data_tool",
+            "aliases": [
+                "torch"
+            ]
+        },
+        {
+            "canonical_name": "jupyter",
+            "skill_type": "data_tool",
+            "aliases": [
+                "jupyter notebook",
+                "jupyter lab"
+            ]
+        },
+        {
+            "canonical_name": "react",
+            "skill_type": "framework",
+            "aliases": [
+                "reactjs",
+                "react.js"
+            ]
+        },
+        {
+            "canonical_name": "vue.js",
+            "skill_type": "framework",
+            "aliases": [
+                "vue",
+                "vuejs"
+            ]
+        },
+        {
+            "canonical_name": "angular",
+            "skill_type": "framework",
+            "aliases": [
+                "angularjs"
+            ]
+        },
+        {
+            "canonical_name": "next.js",
+            "skill_type": "framework",
+            "aliases": [
+                "nextjs",
+                "next"
+            ]
+        },
+        {
+            "canonical_name": "node.js",
+            "skill_type": "framework",
+            "aliases": [
+                "nodejs",
+                "node"
+            ]
+        },
+        {
+            "canonical_name": "express",
+            "skill_type": "framework",
+            "aliases": [
+                "expressjs",
+                "express.js"
+            ]
+        },
+        {
+            "canonical_name": "django",
+            "skill_type": "framework",
+            "aliases": []
+        },
+        {
+            "canonical_name": "flask",
+            "skill_type": "framework",
+            "aliases": []
+        },
+        {
+            "canonical_name": "fastapi",
+            "skill_type": "framework",
+            "aliases": [
+                "fast api"
+            ]
+        },
+        {
+            "canonical_name": "spring",
+            "skill_type": "framework",
+            "aliases": [
+                "spring boot",
+                "spring framework"
+            ]
+        },
+        {
+            "canonical_name": "rails",
+            "skill_type": "framework",
+            "aliases": [
+                "ruby on rails",
+                "ror"
+            ]
+        },
+        {
+            "canonical_name": ".net",
+            "skill_type": "framework",
+            "aliases": [
+                "dotnet",
+                "asp.net"
+            ]
+        },
+        {
+            "canonical_name": "graphql",
+            "skill_type": "framework",
+            "aliases": [
+                "graph ql"
+            ]
+        },
+        {
+            "canonical_name": "rest api",
+            "skill_type": "framework",
+            "aliases": [
+                "restful",
+                "rest apis",
+                "restful api"
+            ]
+        },
+        {
+            "canonical_name": "html",
+            "skill_type": "framework",
+            "aliases": [
+                "html5"
+            ]
+        },
+        {
+            "canonical_name": "css",
+            "skill_type": "framework",
+            "aliases": [
+                "css3"
+            ]
+        },
+        {
+            "canonical_name": "tailwind",
+            "skill_type": "framework",
+            "aliases": [
+                "tailwindcss",
+                "tailwind css"
+            ]
+        },
+        {
+            "canonical_name": "bootstrap",
+            "skill_type": "framework",
+            "aliases": []
+        },
+        {
+            "canonical_name": "git",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "github",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "gitlab",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "bitbucket",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "jira",
+            "skill_type": "other",
+            "aliases": [
+                "atlassian jira"
+            ]
+        },
+        {
+            "canonical_name": "confluence",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "asana",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "monday.com",
+            "skill_type": "other",
+            "aliases": [
+                "monday"
+            ]
+        },
+        {
+            "canonical_name": "notion",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "slack",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "microsoft teams",
+            "skill_type": "other",
+            "aliases": [
+                "ms teams",
+                "teams"
+            ]
+        },
+        {
+            "canonical_name": "zoom",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "figma",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "sketch",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "adobe xd",
+            "skill_type": "other",
+            "aliases": [
+                "xd"
+            ]
+        },
+        {
+            "canonical_name": "linux",
+            "skill_type": "other",
+            "aliases": [
+                "unix",
+                "ubuntu",
+                "centos",
+                "rhel"
+            ]
+        },
+        {
+            "canonical_name": "bash",
+            "skill_type": "other",
+            "aliases": [
+                "shell",
+                "shell scripting"
+            ]
+        },
+        {
+            "canonical_name": "agile",
+            "skill_type": "other",
+            "aliases": [
+                "agile methodology"
+            ]
+        },
+        {
+            "canonical_name": "scrum",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "kanban",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "ci/cd",
+            "skill_type": "other",
+            "aliases": [
+                "cicd",
+                "continuous integration",
+                "continuous deployment"
+            ]
+        },
+        {
+            "canonical_name": "devops",
+            "skill_type": "other",
+            "aliases": [
+                "dev ops"
+            ]
+        },
+        {
+            "canonical_name": "sre",
+            "skill_type": "other",
+            "aliases": [
+                "site reliability engineering"
+            ]
+        },
+        {
+            "canonical_name": "oauth",
+            "skill_type": "security",
+            "aliases": [
+                "oauth2",
+                "oauth 2.0"
+            ]
+        },
+        {
+            "canonical_name": "saml",
+            "skill_type": "security",
+            "aliases": []
+        },
+        {
+            "canonical_name": "sso",
+            "skill_type": "security",
+            "aliases": [
+                "single sign-on",
+                "single sign on"
+            ]
+        },
+        {
+            "canonical_name": "ldap",
+            "skill_type": "security",
+            "aliases": []
+        },
+        {
+            "canonical_name": "active directory",
+            "skill_type": "security",
+            "aliases": [
+                "ad",
+                "azure ad"
+            ]
+        },
+        {
+            "canonical_name": "okta",
+            "skill_type": "security",
+            "aliases": []
+        },
+        {
+            "canonical_name": "auth0",
+            "skill_type": "security",
+            "aliases": []
+        },
+        {
+            "canonical_name": "penetration testing",
+            "skill_type": "security",
+            "aliases": [
+                "pen testing",
+                "pentesting"
+            ]
+        },
+        {
+            "canonical_name": "soc 2",
+            "skill_type": "security",
+            "aliases": [
+                "soc2",
+                "soc ii"
+            ]
+        },
+        {
+            "canonical_name": "gdpr",
+            "skill_type": "security",
+            "aliases": []
+        },
+        {
+            "canonical_name": "hipaa",
+            "skill_type": "security",
+            "aliases": []
+        },
+        {
+            "canonical_name": "pci dss",
+            "skill_type": "security",
+            "aliases": [
+                "pci",
+                "pci-dss"
+            ]
+        },
+        {
+            "canonical_name": "excel",
+            "skill_type": "other",
+            "aliases": [
+                "microsoft excel",
+                "ms excel"
+            ]
+        },
+        {
+            "canonical_name": "google sheets",
+            "skill_type": "other",
+            "aliases": [
+                "gsheets"
+            ]
+        },
+        {
+            "canonical_name": "powerpoint",
+            "skill_type": "other",
+            "aliases": [
+                "microsoft powerpoint",
+                "ppt"
+            ]
+        },
+        {
+            "canonical_name": "google slides",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "word",
+            "skill_type": "other",
+            "aliases": [
+                "microsoft word",
+                "ms word"
+            ]
+        },
+        {
+            "canonical_name": "google docs",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "machine learning",
+            "skill_type": "data_tool",
+            "aliases": [
+                "ml"
+            ]
+        },
+        {
+            "canonical_name": "deep learning",
+            "skill_type": "data_tool",
+            "aliases": [
+                "dl"
+            ]
+        },
+        {
+            "canonical_name": "nlp",
+            "skill_type": "data_tool",
+            "aliases": [
+                "natural language processing"
+            ]
+        },
+        {
+            "canonical_name": "computer vision",
+            "skill_type": "data_tool",
+            "aliases": [
+                "cv"
+            ]
+        },
+        {
+            "canonical_name": "llm",
+            "skill_type": "data_tool",
+            "aliases": [
+                "large language model",
+                "large language models"
+            ]
+        },
+        {
+            "canonical_name": "openai",
+            "skill_type": "data_tool",
+            "aliases": [
+                "open ai",
+                "chatgpt",
+                "gpt",
+                "gpt-4"
+            ]
+        },
+        {
+            "canonical_name": "langchain",
+            "skill_type": "data_tool",
+            "aliases": [
+                "lang chain"
+            ]
+        },
+        {
+            "canonical_name": "huggingface",
+            "skill_type": "data_tool",
+            "aliases": [
+                "hugging face",
+                "hf"
+            ]
+        },
+        {
+            "canonical_name": "salesforce cpq",
+            "skill_type": "crm",
+            "aliases": [
+                "cpq"
+            ]
+        },
+        {
+            "canonical_name": "netsuite",
+            "skill_type": "crm",
+            "aliases": [
+                "oracle netsuite"
+            ]
+        },
+        {
+            "canonical_name": "sap",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "quickbooks",
+            "skill_type": "other",
+            "aliases": [
+                "intuit quickbooks"
+            ]
+        },
+        {
+            "canonical_name": "stripe",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "plaid",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "a/b testing",
+            "skill_type": "other",
+            "aliases": [
+                "ab testing",
+                "split testing"
+            ]
+        },
+        {
+            "canonical_name": "seo",
+            "skill_type": "other",
+            "aliases": [
+                "search engine optimization"
+            ]
+        },
+        {
+            "canonical_name": "sem",
+            "skill_type": "other",
+            "aliases": [
+                "search engine marketing"
+            ]
+        },
+        {
+            "canonical_name": "google ads",
+            "skill_type": "other",
+            "aliases": [
+                "adwords",
+                "google adwords"
+            ]
+        },
+        {
+            "canonical_name": "facebook ads",
+            "skill_type": "other",
+            "aliases": [
+                "meta ads"
+            ]
+        },
+        {
+            "canonical_name": "linkedin ads",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "project management",
+            "skill_type": "other",
+            "aliases": [
+                "pm"
+            ]
+        },
+        {
+            "canonical_name": "product management",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "stakeholder management",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "cross-functional collaboration",
+            "skill_type": "other",
+            "aliases": [
+                "cross functional"
+            ]
+        },
+        {
+            "canonical_name": "data analysis",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "data visualization",
+            "skill_type": "other",
+            "aliases": [
+                "data viz"
+            ]
+        },
+        {
+            "canonical_name": "business intelligence",
+            "skill_type": "other",
+            "aliases": [
+                "bi"
+            ]
+        },
+        {
+            "canonical_name": "financial modeling",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "forecasting",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "budgeting",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "communication",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "presentation",
+            "skill_type": "other",
+            "aliases": [
+                "presenting"
+            ]
+        },
+        {
+            "canonical_name": "leadership",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "negotiation",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "problem solving",
+            "skill_type": "other",
+            "aliases": [
+                "problem-solving"
+            ]
+        },
+        {
+            "canonical_name": "critical thinking",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "strategic thinking",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "time management",
+            "skill_type": "other",
+            "aliases": []
+        },
+        {
+            "canonical_name": "attention to detail",
+            "skill_type": "other",
+            "aliases": [
+                "detail-oriented",
+                "detail oriented"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,3074 @@
+[
+    {
+        "source_type": "greenhouse",
+        "source_key": "stripe"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "lyft"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "airbnb"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "coinbase"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "doordash"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "instacart"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "plaid"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "figma"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "notion"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "databricks"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "snowflake"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "datadog"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "hashicorp"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "gitlab"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "twilio"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "square"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "block"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "ramp"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "brex"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "rippling"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "gusto"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "deel"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "remote"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "linear"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "vercel"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "supabase"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "planetscale"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "neon"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "retool"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "airtable"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "monday"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "asana"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "clickup"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "coda"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "miro"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "loom"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "calendly"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "zapier"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "segment"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "amplitude"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "mixpanel"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "heap"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "intercom"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "zendesk"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "freshworks"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "hubspot"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "salesforce"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "okta"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "auth0"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "cloudflare"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "fastly"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "mongodb"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "elastic"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "confluent"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "cockroachlabs"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "timescale"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "sentry"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "pagerduty"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "splunk"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "newrelic"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "grafana"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "anthropic"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "openai"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "cohere"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "huggingface"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "replicate"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "modal"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "anyscale"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "scale"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "deepmind"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "waymo"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "cruise"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "nuro"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "aurora"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "rivian"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "lucid"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "palantir"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "anduril"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "flexport"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "samsara"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "toast"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "uber"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "grammarly"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "discord"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "slack"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "zoom"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "dropbox"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "box"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "docusign"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "servicenow"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "workday"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "robinhood"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "carta"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "betterment"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "wealthfront"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "pinterest"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "reddit"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "squarespace"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "substack"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "webflow"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "wise"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "upwork"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "fivetran"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "dbt"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "airbyte"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "dagster"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "prefect"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "temporal"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "pulumi"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "terraform"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "snyk"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "sonatype"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "jfrog"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "circleci"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "travisci"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "github"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "atlassian"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "bitbucket"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "jetbrains"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "postman"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "insomnia"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "stoplight"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "readme"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "gitbook"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "notion"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "coda"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "roam"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "obsidian"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "logseq"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "tana"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "craft"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "evernote"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "todoist"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "things"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "omnifocus"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "trello"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "jira"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "shortcut"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "height"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "productboard"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "aha"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "pendo"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "amplitude"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "fullstory"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "hotjar"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "logrocket"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "datadog"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "honeycomb"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "lightstep"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "chronosphere"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "cribl"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "lacework"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "crowdstrike"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "sentinelone"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "paloaltonetworks"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "fortinet"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "zscaler"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "netskope"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "proofpoint"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "mimecast"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "abnormalsecurity"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "tessian"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "material"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "drata"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "vanta"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "secureframe"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "launchdarkly"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "optimizely"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "split"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "flagsmith"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "contentful"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "sanity"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "storyblok"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "strapi"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "prismic"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "algolia"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "typesense"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "meilisearch"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "pinecone"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "weaviate"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "qdrant"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "chroma"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "milvus"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "vespa"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "redis"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "memcached"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "hazelcast"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "aerospike"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "couchbase"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "fauna"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "dgraph"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "neo4j"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "tigergraph"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "arangodb"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "influxdata"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "clickhouse"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "druid"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "rockset"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "starburst"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "dremio"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "tabular"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "onehouse"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "materialize"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "decodable"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "estuary"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "meltano"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "hightouch"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "census"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "rudderstack"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "growthbook"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "statsig"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "eppo"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "causal"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "comet"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "neptune"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "mlflow"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "kubeflow"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "determined"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "run"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "domino"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "datarobot"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "h2o"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "tecton"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "feast"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "iguazio"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "seldon"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "bentoml"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "coreweave"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "lambda"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "together"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "fireworks"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "perplexity"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "mistral"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "stability"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "midjourney"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "runway"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "pika"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "synthesia"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "heygen"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "colossyan"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "elevenlabs"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "assemblyai"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "deepgram"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "gladia"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "rev"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "otter"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "fireflies"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "tldv"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "grain"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "fathom"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "gong"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "chorus"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "outreach"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "salesloft"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "clari"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "people"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "apollo"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "zoominfo"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "clearbit"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "6sense"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "demandbase"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "bombora"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "drift"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "qualified"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "intercom"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "kustomer"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "gladly"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "front"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "missive"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "hiver"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "help-scout"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "freshdesk"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "kayako"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "dixa"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "assembled"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "forethought"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "ada"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "sierra"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "decagon"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "voiceflow"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "rasa"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "cognigy"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "moveworks"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "espressive"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "laiye"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "uipath"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "automationanywhere"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "blueprism"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "workato"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "tray"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "snaplogic"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "boomi"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "mulesoft"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "celigo"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "merge"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "paragon"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "tray"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "pandium"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "prismatic"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "cyclr"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "finch"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "rutter"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "codat"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "railz"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "ntropy"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "heron"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "plaid"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "mx"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "finicity"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "yodlee"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "tink"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "truelayer"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "mono"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "stitch"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "mercury"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "ramp"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "brex"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "divvy"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "airbase"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "teampay"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "rho"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "arc"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "jeeves"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "float"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "spendesk"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "pleo"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "payhawk"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "yokoy"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "rydoo"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "navan"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "tripactions"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "spotnana"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "locomote"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "lola"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "hopper"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "kayak"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "skyscanner"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "kiwi"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "momondo"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "trainline"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "omio"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "wanderu"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "checkout"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "adyen"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "stripe"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "paypal"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "square"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "worldpay"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "fis"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "fiserv"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "global-payments"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "marqeta"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "galileo"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "i2c"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "lithic"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "highnote"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "bond"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "synapse"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "treasury-prime"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "column"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "modern-treasury"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "increase"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "exacta"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "alloy"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "persona"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "jumio"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "onfido"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "veriff"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "socure"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "checkr"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "sterling"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "hireright"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "accurate"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "goodhire"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "certn"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "greenhouse"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "lever"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "ashby"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "workable"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "jazz"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "bamboohr"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "rippling"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "namely"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "hibob"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "personio"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "factorial"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "remote"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "deel"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "oyster"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "plane"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "multiplier"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "papaya"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "velocity"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "lano"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "globalization-partners"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "omnipresent"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "safeguard"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "atlas"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "pilot"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "bench"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "puzzle"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "finta"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "digits"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "finally"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "accountingfly"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "taxbit"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "cointracker"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "zenledger"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "lukka"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "taxjar"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "avalara"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "vertex"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "sovos"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "anrok"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "kintsugi"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "zamp"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "fonoa"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "paddle"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "lemon-squeezy"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "gumroad"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "podia"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "thinkific"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "teachable"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "kajabi"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "mighty"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "circle"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "discord"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "geneva"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "beehiiv"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "substack"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "ghost"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "buttondown"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "convertkit"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "mailchimp"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "klaviyo"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "braze"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "iterable"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "customer-io"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "mparticle"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "lytics"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "bluecore"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "bloomreach"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "insider"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "clevertap"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "moengage"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "onesignal"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "pushwoosh"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "airship"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "leanplum"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "appsflyer"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "adjust"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "branch"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "kochava"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "singular"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "tenjin"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "liftoff"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "vungle"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "ironsource"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "applovin"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "unity"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "epic"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "roblox"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "niantic"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "supercell"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "king"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "zynga"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "scopely"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "jam-city"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "playtika"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "moon-active"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "playrix"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "dream11"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "fanduel"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "draftkings"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "betmgm"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "caesars"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "penn"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "pointsbet"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "tipico"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "sportsbook"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "bet365"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "entain"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "flutter"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "fanatics"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "sleeper"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "underdog"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "prizepicks"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "thescore"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "action-network"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "the-athletic"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "bleacher-report"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "barstool"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "vox"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "buzzfeed"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "vice"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "axios"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "politico"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "punchbowl"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "semafor"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "puck"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "the-information"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "business-insider"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "fortune"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "forbes"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "fast-company"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "inc"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "entrepreneur"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "techcrunch"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "theverge"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "wired"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "arstechnica"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "engadget"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "cnet"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "mashable"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "gizmodo"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "tomshardware"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "pcmag"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "zdnet"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "infoworld"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "computerworld"
+    },
+    {
+        "source_type": "greenhouse",
+        "source_key": "venturebeat"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "front"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "atlassian"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "gitbook"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "restream"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "transcend"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "clearbit"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "gong"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "thebrowsercompany"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "graphite"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "tome"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "workos"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "copyai"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "scribehow"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "parabola"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "metabase"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "circle"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "brevo"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "polywork"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "headspace"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "prismic"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "opensea"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "flatfile"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "vowel"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "helpscout"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "outreach"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "ada"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "replit"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "olx"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "spotify"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "netflix"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "edelman"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "zoox"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "shieldai"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "rackspace"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "ciandt"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "paytm"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "xero"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "veepee"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "lever"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "linear"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "figma"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "notion"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "vercel"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "supabase"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "planetscale"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "retool"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "airtable"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "coda"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "miro"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "loom"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "calendly"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "zapier"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "segment"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "amplitude"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "mixpanel"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "intercom"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "zendesk"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "hubspot"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "okta"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "cloudflare"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "mongodb"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "elastic"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "confluent"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "sentry"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "pagerduty"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "grafana"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "launchdarkly"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "contentful"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "algolia"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "pinecone"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "anthropic"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "openai"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "cohere"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "huggingface"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "scale"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "anyscale"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "waymo"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "cruise"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "nuro"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "aurora"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "rivian"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "lucidmotors"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "relativityspace"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "palantir"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "anduril"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "flexport"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "samsara"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "toast"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "uber"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "grammarly"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "discord"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "slack"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "zoom"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "dropbox"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "box"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "docusign"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "astranis"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "signal"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "automattic"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "wordpress"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "shopify"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "squarespace"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "wix"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "webflow"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "framer"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "canva"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "mural"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "lucid"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "smartsheet"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "monday"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "asana"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "clickup"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "notion"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "roam"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "obsidian"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "superhuman"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "hey"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "basecamp"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "37signals"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "doist"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "todoist"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "twist"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "linear"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "height"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "shortcut"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "zeplin"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "abstract"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "invision"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "sketch"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "figma"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "framer"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "principle"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "protopie"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "maze"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "usertesting"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "userinterviews"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "respondent"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "dscout"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "lookback"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "dovetail"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "condens"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "aurelius"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "enjoyhq"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "productboard"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "pendo"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "amplitude"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "heap"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "mixpanel"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "posthog"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "june"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "koala"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "mutiny"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "intellimize"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "unbounce"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "leadpages"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "instapage"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "webflow"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "framer"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "carrd"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "typedream"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "super"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "softr"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "glide"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "adalo"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "bubble"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "webflow"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "plasmic"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "builder"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "retool"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "appsmith"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "tooljet"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "airplane"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "internal"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "superblocks"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "windmill"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "temporal"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "pipedream"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "n8n"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "make"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "zapier"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "ifttt"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "parabola"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "clay"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "bardeen"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "browse"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "axiom"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "browserhub"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "apify"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "browserless"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "bright-data"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "oxylabs"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "smartproxy"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "scrapingbee"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "scrapfly"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "zenrows"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "diffbot"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "import"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "phantombuster"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "texau"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "captain-data"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "evaboot"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "linked-helper"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "duxsoup"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "waalaxy"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "expandi"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "lemlist"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "instantly"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "smartlead"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "woodpecker"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "mailshake"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "reply"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "mixmax"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "yesware"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "outreach"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "salesloft"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "groove"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "cirruspath"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "xactly"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "spiff"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "captivateiq"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "quotapath"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "everstage"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "forma"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "palette"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "salesforce"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "hubspot"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "pipedrive"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "close"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "copper"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "freshsales"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "zoho"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "monday-sales"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "attio"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "folk"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "affinity"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "clay"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "apollo"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "zoominfo"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "lusha"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "seamless"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "cognism"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "leadiq"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "amplemarket"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "outplay"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "klenty"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "quickmail"
+    },
+    {
+        "source_type": "lever",
+        "source_key": "gmass"
+    }
+]
