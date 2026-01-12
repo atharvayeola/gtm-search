@@ -29,6 +29,13 @@ interface JobsResponse {
   page_size: number;
 }
 
+interface SkillSuggestion {
+  id: string;
+  name: string;
+  type: string | null;
+  job_count: number;
+}
+
 interface ParsedFilters {
   q?: string;
   seniority?: string[];
@@ -66,6 +73,9 @@ export default function JobsPage(): React.ReactElement {
   const [salaryMax, setSalaryMax] = useState<string>('');
   const [city, setCity] = useState('');
   const [country, setCountry] = useState('');
+  const [skillQuery, setSkillQuery] = useState('');
+  const [skillSuggestions, setSkillSuggestions] = useState<SkillSuggestion[]>([]);
+  const [selectedSkills, setSelectedSkills] = useState<SkillSuggestion[]>([]);
 
   const pageSize = 20;
 
@@ -83,6 +93,7 @@ export default function JobsPage(): React.ReactElement {
     if (salaryMax) params.set('salary_max', salaryMax);
     if (city) params.set('city', city);
     if (country) params.set('country', country);
+    selectedSkills.forEach(skill => params.append('skill', skill.name));
 
     try {
       const res = await fetch(`${API_BASE}/jobs?${params.toString()}`);
@@ -94,11 +105,38 @@ export default function JobsPage(): React.ReactElement {
     } finally {
       setLoading(false);
     }
-  }, [page, textSearch, seniority, jobFunction, remoteType, salaryMin, salaryMax, city, country]);
+  }, [page, textSearch, seniority, jobFunction, remoteType, salaryMin, salaryMax, city, country, selectedSkills]);
 
   useEffect(() => {
     fetchJobs();
   }, [fetchJobs]);
+
+  useEffect(() => {
+    const trimmed = skillQuery.trim();
+    if (!trimmed) {
+      setSkillSuggestions([]);
+      return;
+    }
+
+    const timeout = setTimeout(async () => {
+      try {
+        const res = await fetch(
+          `${API_BASE}/skills/suggest?q=${encodeURIComponent(trimmed)}&limit=20`
+        );
+        if (!res.ok) return;
+        const data = await res.json();
+        const suggestions: SkillSuggestion[] = data.suggestions || [];
+        const filtered = suggestions.filter(
+          suggestion => !selectedSkills.some(selected => selected.id === suggestion.id)
+        );
+        setSkillSuggestions(filtered);
+      } catch (err) {
+        console.error('Failed to fetch skill suggestions:', err);
+      }
+    }, 200);
+
+    return () => clearTimeout(timeout);
+  }, [skillQuery, selectedSkills]);
 
   const handleNaturalSearch = async () => {
     if (!naturalQuery.trim()) return;
@@ -125,6 +163,9 @@ export default function JobsPage(): React.ReactElement {
       setSalaryMax('');
       setCity('');
       setCountry('');
+      setSelectedSkills([]);
+      setSkillQuery('');
+      setSkillSuggestions([]);
 
       // Apply only the structured filters (not the raw query text)
       // Only use q for text search if no structured filters were extracted
@@ -170,6 +211,9 @@ export default function JobsPage(): React.ReactElement {
     setSalaryMax('');
     setCity('');
     setCountry('');
+    setSelectedSkills([]);
+    setSkillQuery('');
+    setSkillSuggestions([]);
     setNaturalQuery('');
     setParseExplanation('');
     setPage(1);
@@ -185,6 +229,19 @@ export default function JobsPage(): React.ReactElement {
     } else {
       setter([...current, value]);
     }
+    setPage(1);
+  };
+
+  const addSkill = (skill: SkillSuggestion) => {
+    if (selectedSkills.some(selected => selected.id === skill.id)) return;
+    setSelectedSkills([...selectedSkills, skill]);
+    setSkillQuery('');
+    setSkillSuggestions([]);
+    setPage(1);
+  };
+
+  const removeSkill = (skillId: string) => {
+    setSelectedSkills(selectedSkills.filter(skill => skill.id !== skillId));
     setPage(1);
   };
 
@@ -204,7 +261,7 @@ export default function JobsPage(): React.ReactElement {
 
   const totalPages = Math.ceil(total / pageSize);
   const hasActiveFilters = seniority.length > 0 || jobFunction.length > 0 || remoteType.length > 0 ||
-    salaryMin || salaryMax || city || country || textSearch;
+    salaryMin || salaryMax || city || country || textSearch || selectedSkills.length > 0;
 
   return (
     <main className="jobs-page">
@@ -369,6 +426,62 @@ export default function JobsPage(): React.ReactElement {
         .salary-row {
           display: flex;
           gap: 0.5rem;
+        }
+        .skills-input {
+          position: relative;
+        }
+        .suggestions-list {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: var(--radius);
+          margin-top: 0.5rem;
+          z-index: 20;
+          max-height: 220px;
+          overflow-y: auto;
+        }
+        .suggestion-item {
+          padding: 0.5rem 0.75rem;
+          cursor: pointer;
+          color: var(--text-secondary);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 0.875rem;
+        }
+        .suggestion-item:hover {
+          background: var(--surface-hover);
+          color: var(--text-primary);
+        }
+        .selected-skills {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-top: 0.5rem;
+        }
+        .skill-chip {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.25rem 0.5rem;
+          border-radius: 9999px;
+          border: 1px solid var(--border);
+          background: var(--surface);
+          font-size: 0.75rem;
+          color: var(--text-secondary);
+        }
+        .skill-remove {
+          background: transparent;
+          border: none;
+          color: var(--text-tertiary);
+          cursor: pointer;
+          font-size: 0.75rem;
+        }
+        .skill-remove:hover {
+          color: var(--text-primary);
         }
         
         /* Results Table */
@@ -600,6 +713,51 @@ export default function JobsPage(): React.ReactElement {
                   {opt.replace('_', ' ').charAt(0).toUpperCase() + opt.replace('_', ' ').slice(1)}
                 </label>
               ))}
+            </div>
+
+            {/* Skills */}
+            <div className="filter-section">
+              <span className="filter-label">Skills</span>
+              <div className="skills-input">
+                <input
+                  type="text"
+                  className="input-base filter-input"
+                  value={skillQuery}
+                  onChange={(e) => setSkillQuery(e.target.value)}
+                  placeholder="Type a skill..."
+                />
+                {skillSuggestions.length > 0 && (
+                  <div className="suggestions-list">
+                    {skillSuggestions.map(suggestion => (
+                      <div
+                        key={suggestion.id}
+                        className="suggestion-item"
+                        onClick={() => addSkill(suggestion)}
+                      >
+                        <span>{suggestion.name}</span>
+                        <span className="badge">{suggestion.job_count}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+              {selectedSkills.length > 0 && (
+                <div className="selected-skills">
+                  {selectedSkills.map(skill => (
+                    <span key={skill.id} className="skill-chip">
+                      {skill.name}
+                      <button
+                        type="button"
+                        className="skill-remove"
+                        onClick={() => removeSkill(skill.id)}
+                        aria-label={`Remove ${skill.name}`}
+                      >
+                        x
+                      </button>
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Remote */}

@@ -49,6 +49,7 @@ async def request_id_middleware(request: Request, call_next) -> Response:
     """Add request_id to all requests and responses."""
     request_id = str(uuid.uuid4())
     bind_request_context(request_id)
+    request.state.request_id = request_id
     
     response = await call_next(request)
     response.headers["X-Request-Id"] = request_id
@@ -58,12 +59,13 @@ async def request_id_middleware(request: Request, call_next) -> Response:
 
 
 @app.get("/health")
-async def health_check() -> dict:
+async def health_check(request: Request) -> dict:
     """Health check endpoint."""
     return {
         "status": "healthy",
         "service": "api_service",
         "version": "0.1.0",
+        "request_id": request.state.request_id,
     }
 
 

@@ -12,7 +12,7 @@ from pathlib import Path
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from sqlalchemy import func, select, and_
+from sqlalchemy import func, select, and_, tuple_
 
 from shared.db.session import get_db
 from shared.models import JobRaw, Job
@@ -29,7 +29,13 @@ def check_job_raw_count(min_count: int = 50000) -> tuple[bool, int]:
     with get_db() as db:
         # Count distinct (source_type, source_key, source_job_id)
         count = db.execute(
-            select(func.count(JobRaw.id))
+            select(
+                func.count(
+                    func.distinct(
+                        tuple_(JobRaw.source_type, JobRaw.source_key, JobRaw.source_job_id)
+                    )
+                )
+            )
         ).scalar() or 0
         
     passed = count >= min_count
@@ -81,6 +87,58 @@ def check_api_health(base_url: str = "http://localhost:8000") -> tuple[bool, str
         return False, str(e)
 
 
+def check_ui_smoke(
+    ui_base_url: str = "http://localhost:3000",
+    api_base_url: str = "http://localhost:8000",
+) -> tuple[bool, str]:
+    """Smoke test UI pages with Playwright."""
+    try:
+        from playwright.sync_api import sync_playwright
+    except Exception as e:
+        return False, f"Playwright not available: {e}"
+
+    # Get a job and company id from the API
+    try:
+        response = requests.get(
+            f"{api_base_url}/jobs",
+            params={"page_size": 1},
+            timeout=10,
+        )
+        response.raise_for_status()
+        data = response.json()
+        jobs = data.get("jobs", [])
+        if not jobs:
+            return False, "No jobs found for UI smoke test"
+        job_id = jobs[0]["id"]
+        company_id = jobs[0]["company_id"]
+    except requests.RequestException as e:
+        return False, f"API unavailable for UI smoke test: {e}"
+    except Exception as e:
+        return False, f"Failed to load job id: {e}"
+
+    try:
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch()
+            page = browser.new_page()
+
+            response = page.goto(f"{ui_base_url}/jobs", wait_until="networkidle", timeout=15000)
+            if not response or response.status >= 400:
+                return False, f"/jobs returned {response.status if response else 'no response'}"
+
+            response = page.goto(f"{ui_base_url}/jobs/{job_id}", wait_until="networkidle", timeout=15000)
+            if not response or response.status >= 400:
+                return False, f"/jobs/{job_id} returned {response.status if response else 'no response'}"
+
+            response = page.goto(f"{ui_base_url}/companies/{company_id}", wait_until="networkidle", timeout=15000)
+            if not response or response.status >= 400:
+                return False, f"/companies/{company_id} returned {response.status if response else 'no response'}"
+
+            browser.close()
+        return True, "UI smoke test passed"
+    except Exception as e:
+        return False, f"UI smoke test failed: {str(e)[:200]}"
+
+
 def main():
     """Run all validation checks."""
     print("=" * 60)
@@ -123,6 +181,15 @@ def main():
     status = "✅ PASS" if passed else "❌ FAIL"
     print(f"   {status}: GET /jobs?q=staff&state=NY - {message}")
     results.append(("API /jobs", passed, message))
+    if not passed:
+        all_passed = False
+
+    # Check 5: UI smoke test
+    print("\n🧪 Check 5: UI Smoke Test")
+    passed, message = check_ui_smoke()
+    status = "✅ PASS" if passed else "❌ FAIL"
+    print(f"   {status}: {message}")
+    results.append(("UI Smoke", passed, message))
     if not passed:
         all_passed = False
     

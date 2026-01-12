@@ -6,7 +6,7 @@ Endpoints for viewing companies and their skill rollups.
 
 from typing import Optional
 
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, HTTPException, Query, Request
 from pydantic import BaseModel
 from sqlalchemy import func, select
 
@@ -33,6 +33,7 @@ class CompanyListItem(BaseModel):
 
 class CompanyListResponse(BaseModel):
     """Paginated company list."""
+    request_id: str
     companies: list[CompanyListItem]
     total: int
     page: int
@@ -58,6 +59,7 @@ class CompanyJobItem(BaseModel):
 
 class CompanyDetailResponse(BaseModel):
     """Full company details."""
+    request_id: str
     id: str
     name: str
     domain: Optional[str] = None
@@ -75,6 +77,7 @@ class CompanyDetailResponse(BaseModel):
 
 @router.get("", response_model=CompanyListResponse)
 def list_companies(
+    request: Request,
     q: Optional[str] = Query(None, description="Search by company name"),
     page: int = Query(1, ge=1, description="Page number"),
     page_size: int = Query(20, ge=1, le=100, description="Items per page"),
@@ -119,6 +122,7 @@ def list_companies(
         ]
         
         return CompanyListResponse(
+            request_id=request.state.request_id,
             companies=companies,
             total=total,
             page=page,
@@ -127,7 +131,7 @@ def list_companies(
 
 
 @router.get("/{company_id}", response_model=CompanyDetailResponse)
-def get_company(company_id: str) -> CompanyDetailResponse:
+def get_company(company_id: str, request: Request) -> CompanyDetailResponse:
     """Get company details with skill rollups and recent jobs."""
     with get_db() as db:
         # Fetch company
@@ -182,6 +186,7 @@ def get_company(company_id: str) -> CompanyDetailResponse:
         ]
         
         return CompanyDetailResponse(
+            request_id=request.state.request_id,
             id=company.id,
             name=company.name,
             domain=company.domain,

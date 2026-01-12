@@ -415,19 +415,121 @@ Analyze the job and fill in accurate values based on the description."""
             List of JobExtracted objects
         """
         logger.info("Starting batch extraction", count=len(jobs))
-        
-        results = []
+
+        if not jobs:
+            return []
+
+        def parse_json_array(raw_response: str) -> list[dict[str, Any]] | None:
+            try:
+                data = json.loads(raw_response)
+                if isinstance(data, list):
+                    return data
+            except json.JSONDecodeError:
+                pass
+
+            start_idx = raw_response.find("[")
+            end_idx = raw_response.rfind("]") + 1
+            if start_idx == -1 or end_idx == 0:
+                return None
+
+            try:
+                data = json.loads(raw_response[start_idx:end_idx])
+                if isinstance(data, list):
+                    return data
+            except json.JSONDecodeError:
+                return None
+            return None
+
+        def coerce_extracted(
+            job_ref: str,
+            item: dict[str, Any] | None,
+            title: str,
+            company: str,
+        ) -> JobExtracted | None:
+            parts = job_ref.split("|")
+            if len(parts) != 3:
+                return None
+
+            source_type, source_key, source_job_id = parts
+            data = dict(item or {})
+            data = normalize_llm_output(data)
+
+            data["source_type"] = source_type
+            data["source_key"] = source_key
+            data["source_job_id"] = source_job_id
+            data.setdefault("company_name", company or "Unknown")
+            data.setdefault("role_title", title or "Unknown Role")
+            data.pop("job_ref", None)
+
+            try:
+                return JobExtracted(**data)
+            except Exception as e:
+                logger.debug("Batch item validation failed", job_ref=job_ref, error=str(e))
+                return None
+
+        # Build batch payload
+        batch_payload = []
         for job in jobs:
-            extracted = self.extract_single(
-                job_ref=job.get("job_ref", ""),
-                text=job.get("text", ""),
-                title=job.get("title", ""),
-                company=job.get("company", ""),
-                location=job.get("location", ""),
-            )
+            job_ref = job.get("job_ref", "")
+            title = job.get("title", "")
+            company = job.get("company", "")
+            location = job.get("location", "")
+            text = job.get("text", "")
+            header = f"Title: {title}\nCompany: {company}\nLocation: {location}\n\n"
+            batch_payload.append({
+                "job_ref": job_ref,
+                "text": header + text,
+            })
+
+        prompt = TIER1_USER_TEMPLATE.format(
+            jobs_json=json.dumps(batch_payload, ensure_ascii=False)
+        )
+
+        extracted_items: list[dict[str, Any]] | None = None
+        try:
+            raw_response = self.generate(prompt, system=TIER1_SYSTEM_PROMPT)
+            extracted_items = parse_json_array(raw_response)
+        except Exception as e:
+            logger.warning("Batch extraction failed, falling back to single", error=str(e))
+
+        results: list[JobExtracted] = []
+        items_by_ref: dict[str, dict[str, Any]] = {}
+
+        if extracted_items:
+            for item in extracted_items:
+                if isinstance(item, dict) and item.get("job_ref"):
+                    items_by_ref[str(item["job_ref"])] = item
+
+        for idx, job in enumerate(jobs):
+            job_ref = job.get("job_ref", "")
+            title = job.get("title", "")
+            company = job.get("company", "")
+            location = job.get("location", "")
+            text = job.get("text", "")
+
+            item = None
+            if job_ref in items_by_ref:
+                item = items_by_ref[job_ref]
+            elif extracted_items and idx < len(extracted_items) and isinstance(extracted_items[idx], dict):
+                item = extracted_items[idx]
+
+            extracted = coerce_extracted(job_ref, item, title, company)
+
+            if not extracted:
+                for _ in range(2):
+                    extracted = self.extract_single(
+                        job_ref=job_ref,
+                        text=text,
+                        title=title,
+                        company=company,
+                        location=location,
+                    )
+                    if extracted:
+                        break
+
             if extracted:
                 results.append(extracted)
-        
+
         logger.info(
             "Batch extraction complete",
             input_count=len(jobs),
