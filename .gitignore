@@ -55,6 +55,7 @@ logs/
 
 # Reports (keep directory, ignore generated files)
 reports/*.json
+reports/CTO_INTERVIEW_PREP.md
 
 # Node.js (web_ui)
 apps/web_ui/node_modules/

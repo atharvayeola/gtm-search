@@ -9,7 +9,7 @@ from uuid import UUID
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from pydantic import BaseModel
-from sqlalchemy import func, or_, select
+from sqlalchemy import func, or_, select, text
 from sqlalchemy.orm import Session, joinedload
 
 from shared.db.session import get_db
@@ -27,6 +27,16 @@ class SkillResponse(BaseModel):
     id: str
     name: str
     type: Optional[str] = None
+    
+class JobStatItem(BaseModel):
+    """General statistics item (name and count)."""
+    name: str
+    count: int
+
+class SalaryStat(BaseModel):
+    """Salary statistics."""
+    median_salary: float
+    total_with_salary: int
 
 
 class JobListItem(BaseModel):
@@ -214,6 +224,51 @@ def search_jobs(
             page=page,
             page_size=page_size,
         )
+
+
+@router.get("/stats/functions", response_model=list[JobStatItem])
+def get_job_function_stats(request: Request) -> list[JobStatItem]:
+    """Get job count stats grouped by function."""
+    with get_db() as db:
+        result = db.execute(text("SELECT name, count FROM mv_job_function_stats")).all()
+        return [JobStatItem(name=row.name, count=row.count) for row in result]
+
+@router.get("/stats/seniority", response_model=list[JobStatItem])
+def get_seniority_stats(request: Request) -> list[JobStatItem]:
+    """Get job count stats grouped by seniority."""
+    with get_db() as db:
+        result = db.execute(text("SELECT name, count FROM mv_seniority_stats")).all()
+        return [JobStatItem(name=row.name, count=row.count) for row in result]
+
+@router.get("/stats/remote", response_model=list[JobStatItem])
+def get_remote_stats(request: Request) -> list[JobStatItem]:
+    """Get job count stats grouped by remote type."""
+    with get_db() as db:
+        result = db.execute(text("SELECT name, count FROM mv_remote_stats")).all()
+        return [JobStatItem(name=row.name, count=row.count) for row in result]
+
+@router.get("/stats/salary", response_model=SalaryStat)
+def get_salary_stats(request: Request) -> SalaryStat:
+    """Get overall salary statistics (median)."""
+    with get_db() as db:
+        row = db.execute(text("SELECT median_salary, total_with_salary FROM mv_salary_stats")).first()
+        if not row:
+            return SalaryStat(median_salary=0, total_with_salary=0)
+        return SalaryStat(median_salary=row.median_salary or 0, total_with_salary=row.total_with_salary)
+
+@router.get("/stats/salary/buckets", response_model=list[JobStatItem])
+def get_salary_bucket_stats(request: Request) -> list[JobStatItem]:
+    """Get job count stats grouped by salary bucket."""
+    with get_db() as db:
+        result = db.execute(text("SELECT name, count FROM mv_salary_bucket_stats ORDER BY sort_order")).all()
+        return [JobStatItem(name=row.name, count=row.count) for row in result]
+
+@router.get("/stats/locations", response_model=list[JobStatItem])
+def get_location_stats(request: Request) -> list[JobStatItem]:
+    """Get job count stats grouped by location (City, State)."""
+    with get_db() as db:
+        result = db.execute(text("SELECT name, count FROM mv_location_stats ORDER BY count DESC LIMIT 50")).all()
+        return [JobStatItem(name=row.name, count=row.count) for row in result]
 
 
 @router.get("/{job_id}", response_model=JobDetailResponse)

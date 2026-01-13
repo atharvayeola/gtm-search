@@ -95,6 +95,9 @@ def list_companies(
                 func.count(Job.id).label("job_count"),
             )
             .outerjoin(Job, Job.company_id == Company.id)
+            .where(Company.name.isnot(None))
+            .where(Company.name != '')
+            .where(func.lower(Company.name) != 'unknown')
             .group_by(Company.id)
         )
         

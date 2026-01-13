@@ -195,12 +195,13 @@ export default function JobDetailPage(): React.ReactElement {
         }
         
         .section-title {
-          font-size: 1.25rem;
-          font-weight: 600;
+          font-size: 1.5rem; /* Larger */
+          font-weight: 800; /* Bolder */
           color: var(--text-primary);
           margin-bottom: 1.25rem;
           padding-bottom: 0.75rem;
           border-bottom: 1px solid var(--border);
+          letter-spacing: -0.02em;
         }
         
         .skills-container {
@@ -224,8 +225,8 @@ export default function JobDetailPage(): React.ReactElement {
         }
         
         .summary-box {
-          background: rgba(59, 130, 246, 0.05);
-          border: 1px solid rgba(59, 130, 246, 0.2);
+          background: rgba(224, 122, 95, 0.05); /* Terra Cotta tint */
+          border: 1px solid rgba(224, 122, 95, 0.2);
           border-radius: var(--radius);
           padding: 1.5rem;
           margin-bottom: 2rem;
@@ -242,10 +243,11 @@ export default function JobDetailPage(): React.ReactElement {
           color: var(--text-secondary);
         }
         .description-content :global(mark) {
-          background: rgba(253, 224, 71, 0.2);
-          color: #fef08a; /* Soft yellow for dark mode */
+          background: rgba(224, 122, 95, 0.2); /* Terra Cotta highlight */
+          color: #0F172A; /* Slate 900 - High Contrast */
+          font-weight: 600;
           padding: 0 0.25rem;
-          border-radius: 2px;
+          border-radius: 4px;
         }
         
         .sidebar-card {
